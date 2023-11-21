@@ -18,7 +18,6 @@ Feel free to explore, reach out, and let's connect!
 
 ---
 
-**Español:**
 # ¡Bienvenido a mi Portafolio!
 
 Este repositorio muestra mi trayectoria creativa como desarrollador web y diseñador. Explora mis proyectos, sumérgete en mis habilidades y conóceme mejor a través de este portafolio.
