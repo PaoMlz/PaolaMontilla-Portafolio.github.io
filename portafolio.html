@@ -6,25 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paola Montilla - Portafolio</title>
     <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu archivo de estilos CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 
 <body>
-    
+
 
     <nav id="menu">
-<div class="language-switch">
-        <button id="languageBtn" onclick="cambiarIdioma()">
-            <img id="banderaEspana" src="./img/Bandera_Nacional_de_España.png" alt="Español">
-            <img id="banderaInglaterra" src="./img/ilustracion-bandera-reino-unido_53876-18166.avif" alt="Inglés">
-        </button>
-    </div>
+        <div class="language-switch">
+            <button id="languageBtn" onclick="cambiarIdioma()">
+                <img id="banderaEspana" src="./img/Bandera_Nacional_de_España.png" alt="Español">
+                <img id="banderaInglaterra" src="./img/ilustracion-bandera-reino-unido_53876-18166.avif" alt="Inglés">
+            </button>
+        </div>
         <ul>
-            <li><a href="#" id="Home">Inicio</a></li>
-            <li><a href="#" id="aboutLink">Sobre mi</a></li>
-            <li><a href="#" id="projectsLink">Portafolio</a></li> 
-            <li><a href="#" id="Skills">Habilidades</a></li>
+            <li><a href="" id="Home">Inicio</a></li>
+            <li><a href="#aboutMeContent" id="aboutLink">Sobre mi</a></li>
+            <li><a href="#portfolioSection" id="projectsLink">Portafolio</a></li>
+            <li><a href="#skillsLinks" id="skills">Habilidades</a></li>
             <li><a href="#" id="curriculum">Hoja de vida</a></li>
-            <li><a href="contact.html" id="contactLink">Contacto</a></li>
+            <li><a href="#contactSection" id="contactLink">Contacto</a></li>
         </ul>
     </nav>
 
@@ -35,14 +37,101 @@
                 <h2 class="hero-name">PAOLA MONTILLA</h2>
                 <p class="hero-title">Diseñando experiencias digitales cautivadoras.</p>
                 <p class="hero-message">¡Estoy lista para trabajar contigo!</p>
-                <a href="contact.html" class="contact-button">Contactar</a>
+                <a href="mailto:apmontillal@gmail.com" class="contact-button">Contactar</a>
             </div>
         </div>
     </header>
 
-    <div id="content">
-        <!-- Aquí se mostrará el contenido de las páginas -->
+    <div id="aboutMeContent" style="display: none;">
+        <h2 class="SobreMi" id="aboutTitle">Sobre mí</h2>
+        <div class="about-details">
+            <div class="about-photo">
+                <img src="./img/31448169-66ba-4dbf-acd0-78956adfdeff.jpg" alt="Paola Montilla" class="about-photoAM" id="aboutPhoto">
+            </div>
+            <div class="about-description">
+                <p id="aboutDescription">
+                    Soy una desarrolladora web y docente de corazón. A lo largo de mi trayectoria, he aprendido que los sueños no son imposibles, y aquí estoy, llevando mi vocación y pasión de la mano. Siempre he disfrutado del placer de aprender, lo cual me ha llevado a explorar diferentes áreas académicas y profesionales. Finalmente, encontré mi camino en el mundo tecnológico, donde el aprendizaje es constante y se transforma día a día. Me encanta resolver dilemas tecnológicos y enfrentarme a lo desconocido en un entorno cambiante. Mi objetivo es seguir creciendo profesionalmente y contribuir a este emocionante campo en constante evolución.
+                </p>
+            </div>
+        </div>
     </div>
+    
+    <div id="portfolioSection" class="flex-container" style="display: none;">
+        <h2 class="project-title">Web Development Projects</h2>
+
+    
+        <div class="project">
+            <img src="./img/textanalyzer.jpg" alt="Proyecto 1">
+            <p>Project 1 Text Analyzer   <a href="https://paomlz.github.io/DEV009-text-analyzer/">View project</a> </p>
+        </div>
+    
+        <div class="project">
+            <img src="./img/dataLOVER.jpg" alt="Proyecto 2">
+            <p>Project 2 Data Lover   <a href="https://paomlz.github.io/DEV009-data-lovers/">View project</a> </p>
+        </div>
+    
+        <!-- Agrega los demás proyectos aquí -->
+    
+        <!-- Project 3 -->
+        <div class="project">
+            <img src="./img/log in.png" alt="Proyecto 3">
+            <p>Project 3 social-network  <a href="https://github.com/PaoMlz/DEV009-social-network">View project</a> </p>
+        </div>
+    
+        <!-- Project 4 -->
+        <div class="project">
+            <img src="./img/MKD.png" alt="Proyecto 4">
+            <p>Project 4 Mdlinks  <a href="https://github.com/PaoMlz/DEV009-md-links">View project</a> </p>
+        </div>
+    
+        <!-- Project 5 -->
+        <div class="project">
+            <img src="./img/burgerQUEEN.jpg" alt="Proyecto 5">
+            <p>Project 5 Burguer queen Api client <a href="https://github.com/PaoMlz/DEV009-burger-queen-api-client">View project</a> </p>
+        </div>
+    
+        <!-- Agrega más proyectos siguiendo la misma estructura -->
+    
+    </div>
+
+    <div id="skillsLinks" style="display: none;">
+        <h2 class="skills-title">Habilidades técnicas</h2>
+        <ul class="skills-list">
+            <li><i class="fab fa-html5"></i> Lenguajes de programación: HTML, CSS, JavaScript, TypeScript.</li>
+            <li><i class="fab fa-react"></i> Frameworks/Librerías: React, Font Awesome, Bootstrap.</li>
+            <li><i class="fas fa-database"></i> Bases de Datos: Firebase.</li>
+            <li><i class="fas fa-tools"></i> Herramientas: Git, Node.js.</li>
+            <li><i class="fas fa-tasks"></i> Metodologías de Gestión de Proyectos: Scrum, Gantt.</li>
+            <li><i class="fas fa-file-code"></i> Formatos de datos: JSON.</li>
+            <li><i class="fab fa-trello"></i> Gestión de Proyectos: Trello, GitProject.</li>
+            <li><i class="fas fa-pencil-alt"></i> Diseño y Prototipado: Figma, Canva.</li>
+        </ul>
+    </div>
+    
+    <div id="curriculumSection" style="display: none;">
+        <h2 class="curriculum-title">Hoja de vida</h2>
+        <p class="curriculum-description">Descarga</p>
+        <div class="curriculum-downloads">
+            <a href="./documents/cv tech Paola Montilla 2023.docx.pdf" download="Paola_Montilla_Hoja_de_Vida_ES.pdf" class="download-link">
+                <img src="./img/Bandera_Nacional_de_España.png" alt="Bandera de España"> Hoja de vida en Español
+            </a>
+            <a href="./cv/paola_montilla_en.pdf" download="Paola_Montilla_Resume_EN.pdf" class="download-link">
+                <img src="./img/ilustracion-bandera-reino-unido_53876-18166.avif" alt="Bandera del Reino Unido"> Resume in English
+            </a>
+        </div>
+    </div>
+    
+    <div id="contactSection" style="display: none;">
+        <h2 class="contact-title">Contacto</h2>
+        <div class="contact-icons">
+            <a href="https://www.linkedin.com/in/paola-montilla-48a899b1/" target="blank" class="contact-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:apmontillal@gmail.com" target="blank" class="contact-icon"><i class="far fa-envelope"></i></a>
+            <a href="https://github.com/PaoMlz" target="blank" class="contact-icon"><i class="fab fa-github"></i></a>
+            <a href="tel:+57 3196427272" class="contact-icon"><i class="fas fa-phone-alt"></i></a>
+        </div>
+    </div>
+    
+    
 
     <footer>
         <div class="footer-content">
@@ -58,6 +147,3 @@
 </body>
 
 </html>
-
-
-

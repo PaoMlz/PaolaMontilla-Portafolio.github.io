@@ -7,6 +7,7 @@ body {
     font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace; /* Tipo de fuente para el texto */
 }
 
+
 /* Estilos para el menú de navegación */
 #menu {
     background-color: #117935; /* Color de fondo para el menú */
@@ -171,6 +172,263 @@ footer {
 
 .footer-links a:hover {
     text-decoration: underline;
+}
+
+/* Estilos para la sección "Sobre Mí" */
+#aboutMeContent {
+    display: none; /* Inicialmente oculto */
+    text-align: center; /* Alineación central */
+    padding: 20px; /* Espaciado interior */
+    background-color: #000;
+    min-height: 500px; /* Altura mínima */
+    overflow: hidden; /* Oculta el exceso de contenido si es necesario */
+}
+
+.about-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-photo img {
+    width: 180px;
+    height: 250px;
+    border-radius: 15%;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 20px; /* Ajusta el margen derecho para separar la foto de la descripción */
+}
+
+.about-description {
+    flex: 1 1 auto; /* Hacer que la descripción ocupe el espacio disponible */
+    background-color: #333333ad;
+    color: #fff;
+    padding: 20px;
+}
+
+.about-description p {
+    text-align: left;
+    max-width: 100%; /* Ancho máximo del texto al 100% del contenedor */
+    margin: 0;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: medium;
+}
+
+h2.SobreMi {
+    color: green; /* Cambiar el color del título a verde */
+}
+/*PORTAFOLIO*/
+#portfolioSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-gap: 20px; /* Espacio entre las tarjetas */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    padding: 10px;
+}
+
+.project {
+    width: 200px; /* Ancho máximo fijo para las tarjetas */
+    height: 200px; /* Altura fija para las tarjetas (opcional) */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.project img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center center; /* Opcional: centrar la imagen */
+}
+
+.project p {
+    padding: 10px;
+    margin: 0;
+}
+
+.project a {
+    display: block;
+    text-align: center;
+    padding: 8px 0;
+    background-color: #1DB954;
+    color: #ffffff;
+    text-decoration: none;
+    border-top: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.project a:hover {
+    background-color: #e0e0e0;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    color: #1DB954; /* Cambia este valor al color que desees */
+    text-align: center; /* Centrar el texto */
+    margin-top: 50px; /* Espacio superior para el título */
+    /* Otros estilos según sea necesario */
+}
+
+
+
+@media (min-width: 768px) {
+    /* Estilos para pantallas más grandes */
+    #portfolioSection {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    }
+}
+
+/*SKILLS*/
+/* Estilos para el contenedor principal de habilidades */
+#skillsLinks {
+    padding: 20px; /* Puedes ajustar este valor según sea necesario */
+    margin-left: 50px; /* Ajusta este valor para mover todo el contenido hacia la derecha */
+}
+
+/* Estilos para la lista de habilidades */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilos para los íconos de habilidades */
+.skills-list li {
+    margin-bottom: 10px;
+    margin-left: 30px; /* Ajusta este valor para mover los íconos hacia la derecha */
+}
+
+/* Estilos para los íconos en la lista */
+.skills-list li .icon {
+    display: inline-block;
+    width: 20px; /* Ancho del icono */
+    height: 20px; /* Altura del icono */
+    margin-right: 10px;
+    /* Añade aquí la configuración para mostrar los íconos, por ejemplo, usar emojis o imágenes */
+}
+
+/* Estilos para el título de habilidades */
+.skills-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.skills-list i {
+    font-size: 24px; /* Tamaño deseado para los iconos */
+    margin-right: 10px; /* Espacio opcional entre los iconos y el texto */
+}
+
+
+/* Estilos para los íconos en la lista */
+.skills-list li .icon {
+    display: inline-block;
+    width: 20px; /* Ancho del icono */
+    height: 20px; /* Altura del icono */
+    margin-right: 10px;
+    /* Añade aquí la configuración para mostrar los íconos, por ejemplo, usar emojis o imágenes */
+}
+
+/* Estilos para el título de habilidades */
+.skills-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.skills-list i {
+    font-size: 24px; /* Tamaño deseado para los iconos */
+    margin-right: 10px; /* Espacio opcional entre los iconos y el texto */
+}
+
+
+/******curriculoooo******/
+
+/* Estilos para la sección de la hoja de vida */
+#curriculumSection {
+    display: none; /* Oculta la sección por defecto */
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #000000;
+}
+
+/* Estilos para el título de la hoja de vida */
+.curriculum-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #1DB954;
+}
+
+/* Estilos para la descripción de la hoja de vida */
+.curriculum-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #fffcfc;
+}
+
+/* Estilos para los enlaces de descarga */
+.curriculum-downloads {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilos para los enlaces de descarga individuales */
+.download-link {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: larger;
+    text-decoration: none;
+    color: #ffffff;
+    background-color:  #1DB954;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #1DB954;;
+}
+
+/* Estilos para las imágenes de las banderas */
+.download-link img {
+    width: 70px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+/*********contact******/
+#contactSection {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinear al centro del eje principal */
+    align-items: center; /* Alinear al centro del eje secundario */
+    height: 300px; /* Ajusta la altura según sea necesario */
+}
+
+.contact-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-icons {
+    margin-top: 100px;
+    font-size: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Alinear al centro del eje principal (horizontalmente) */
+}
+
+/* Estilos para los iconos */
+.contact-icon {
+    margin: 30px;
+    color: green; /* Cambiar el color a verde */
 }
 
 
