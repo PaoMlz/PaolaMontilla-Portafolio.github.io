@@ -44,6 +44,7 @@ function cambiarTextoIdioma(idioma) {
                         </p>
                     </div>
                 </div>`,
+            skillsTitle: "Habilidades técnicas",
             programmingLanguages: "Lenguajes de programación: HTML, CSS, JavaScript, TypeScript.",
             frameworksLibraries: "Frameworks/Librerías: React, Font Awesome, Bootstrap.",
             databases: "Bases de Datos: Firebase.",
@@ -51,7 +52,10 @@ function cambiarTextoIdioma(idioma) {
             projectManagementMethodologies: "Metodologías de Gestión de Proyectos: Scrum, Gantt.",
             dataFormats: "Formatos de datos: JSON.",
             projectManagement: "Gestión de Proyectos: Trello, GitProject.",
-            designPrototyping: "Diseño y Prototipado: Figma, Canva."
+            designPrototyping: "Diseño y Prototipado: Figma, Canva.",
+            curriculumTitle: "Hoja de vida",
+            curriculumDescription: "Descarga",
+            contactTitle: "Contacto"
         },
         en: {
             Home: "Home",
@@ -78,6 +82,7 @@ function cambiarTextoIdioma(idioma) {
                         </p>
                     </div>
                 </div>`,
+            skillsTitle: "Skills",
             programmingLanguages: "Programming Languages: HTML, CSS, JavaScript, TypeScript.",
             frameworksLibraries: "Frameworks/Libraries: React, Font Awesome, Bootstrap.",
             databases: "Databases: Firebase.",
@@ -85,52 +90,84 @@ function cambiarTextoIdioma(idioma) {
             projectManagementMethodologies: "Project Management Methodologies: Scrum, Gantt.",
             dataFormats: "Data Formats: JSON.",
             projectManagement: "Project Management: Trello, GitProject.",
-            designPrototyping: "Design & Prototyping: Figma, Canva."
+            designPrototyping: "Design & Prototyping: Figma, Canva.",
+            curriculumTitle: "Curriculum",
+            curriculumDescription: "Download",
+            contactTitle: "Contact",
         }
-
-
     };
 
-
     // Actualizar textos de los elementos del menú según el idioma seleccionado
-    const homeLink = document.querySelector("#Home");
-    const aboutLink = document.querySelector("#aboutLink");
-    const projectsLink = document.querySelector("#projectsLink");
-    const skillsLink = document.querySelector('a[href="#skillsLinks"]');
-    const curriculumLink = document.querySelector("#curriculum");
-    const contactLink = document.querySelector("#contactLink");
+    document.getElementById("Home").textContent = textos[idioma].Home;
+    document.getElementById("aboutLink").textContent = textos[idioma].aboutLink;
+    document.getElementById("projectsLink").textContent = textos[idioma].projectsLink;
+    document.getElementById("skills").textContent = textos[idioma].Skills;
+    document.getElementById("curriculum").textContent = textos[idioma].curriculum;
+    document.getElementById("contactLink").textContent = textos[idioma].contactLink;
 
-    homeLink.textContent = textos[idioma].Home;
-    aboutLink.textContent = textos[idioma].aboutLink;
-    projectsLink.textContent = textos[idioma].projectsLink;
-    skillsLink.textContent = textos[idioma].Skills;
-    curriculumLink.textContent = textos[idioma].curriculum;
-    contactLink.textContent = textos[idioma].contactLink;
-    // Actualizar mensaje en el héroe
-    const heroTitle = document.querySelector(".hero-title");
-    heroTitle.textContent = textos[idioma].heroTitle;
+    // Actualizar mensaje en el héroe y otros elementos
+    document.querySelector(".hero-title").textContent = textos[idioma].heroTitle;
+    document.querySelector(".hero-message").textContent = textos[idioma].heroMessage;
+    document.querySelector(".contact-button").textContent = textos[idioma].botonContact;
 
-    const heroMessage = document.querySelector(".hero-message");
-    heroMessage.textContent = textos[idioma].heroMessage;
-
-    const botonContact = document.querySelector(".contact-button");
-    botonContact.textContent = textos[idioma].botonContact;
-
-    const privacyPolicy = document.querySelectorAll(".footer-links a")[0];
-    const termsOfService = document.querySelectorAll(".footer-links a")[1];
-    privacyPolicy.textContent = textos[idioma].privacyPolicy;
-    termsOfService.textContent = textos[idioma].termsOfService;
+    document.querySelectorAll(".footer-links a")[0].textContent = textos[idioma].privacyPolicy;
+    document.querySelectorAll(".footer-links a")[1].textContent = textos[idioma].termsOfService;
 
     // Actualizar el contenido de "Sobre Mí" según el idioma
     const aboutMeContent = document.getElementById("aboutMeContent");
     aboutMeContent.innerHTML = textos[idioma].aboutMeContent;
-
-    // Reemplazar el ID de la imagen en el contenido de "Sobre Mí"
     aboutMeContent.innerHTML = aboutMeContent.innerHTML.replace('about-photoAM', 'aboutPhoto');
 
-    const titleAboutMe = document.querySelector("#aboutMeContent h2");
-    titleAboutMe.textContent = textos[idioma].titleAboutMe;
+    document.querySelector("#aboutMeContent h2").textContent = textos[idioma].titleAboutMe;
+
+
+
+    const skillsTitle = document.querySelector(".skills-title");
+    if (skillsTitle) {
+        skillsTitle.textContent = textos[idioma].skillsTitle;
+    }
+
+    const skillsLink = document.getElementById("skills");
+    skillsLink.textContent = textos[idioma].Skills;
+
+    // Actualizar el contenido de la sección de habilidades técnicas según el idioma
+    const skillsContent = document.getElementById("skillsLinks");
+    if (skillsContent) {
+        const skillsList = skillsContent.querySelector(".skills-list");
+        if (skillsList) {
+            const items = skillsList.getElementsByTagName("li");
+            items[0].innerHTML = `<i class="fab fa-html5"></i> ${textos[idioma].programmingLanguages}`;
+            items[1].innerHTML = `<i class="fab fa-react"></i> ${textos[idioma].frameworksLibraries}`;
+            items[2].innerHTML = `<i class="fas fa-database"></i> ${textos[idioma].databases}`;
+            items[3].innerHTML = `<i class="fas fa-tools"></i> ${textos[idioma].tools}`;
+            items[4].innerHTML = `<i class="fas fa-tasks"></i> ${textos[idioma].projectManagementMethodologies}`;
+            items[5].innerHTML = `<i class="fas fa-file-code"></i> ${textos[idioma].dataFormats}`;
+            items[6].innerHTML = `<i class="fab fa-trello"></i> ${textos[idioma].projectManagement}`;
+            items[7].innerHTML = `<i class="fas fa-pencil-alt"></i> ${textos[idioma].designPrototyping}`;
+        }
+    }
+
+    //CV
+    const curriculumTitle = document.querySelector(".curriculum-title");
+    if (curriculumTitle) {
+        curriculumTitle.textContent = textos[idioma].curriculumTitle;
+    }
+
+    const curriculumDescription = document.querySelector(".curriculum-description");
+    if (curriculumDescription) {
+        curriculumDescription.textContent = textos[idioma].curriculumDescription;
+    }
+
+    //CONTACT
+    const contactTitle = document.querySelector(".contact-title");
+    if (contactTitle) {
+        contactTitle.textContent = textos[idioma].contactTitle;
+    }
+
 }
+
+
+
 
 function cambiarContenidoSobreMi() {
     const aboutMeContent = document.getElementById("aboutMeContent");
