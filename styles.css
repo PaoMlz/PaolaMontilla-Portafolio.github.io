@@ -431,6 +431,60 @@ h2.SobreMi {
     color: green; /* Cambiar el color a verde */
 }
 
+@media only screen and (max-width: 767px) {
+    /* Ajustes generales para dispositivos móviles */
+    body {
+        font-size: 16px;
+    }
+
+    /* Estilos para el menú de navegación en dispositivos móviles */
+    #menu {
+        padding: 10px;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #menu ul li {
+        margin: 10px 0;
+    }
+
+    /* Estilos para el encabezado en dispositivos móviles */
+    header {
+        padding: 10px;
+    }
+
+    header .hero .hero-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-name {
+        font-size: 24px;
+    }
+
+    .hero-title {
+        font-size: 16px;
+    }
+
+    .hero-message {
+        font-size: 14px;
+    }
+
+    /* Estilos para la sección "Sobre Mí" en dispositivos móviles */
+    #aboutMeContent {
+        padding: 10px;
+    }
+
+    .about-photo img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+
 
 
 
