@@ -431,24 +431,24 @@ h2.SobreMi {
     color: green; /* Cambiar el color a verde */
 }
 @media only screen and (max-width: 767px) {
-    /* Ajustes generales para dispositivos móviles */
-
-    /* Estilos para el menú de navegación en dispositivos móviles */
-    #menu {
+   #menu {
         padding: 10px;
         overflow-x: auto; /* Agrega scroll horizontal si el contenido excede el ancho */
         white-space: nowrap; /* Evita el retorno de línea */
+        display: flex;
     }
 
     #menu ul {
-        flex-direction: row; /* Alinea los elementos en una fila */
-        align-items: center;
-        text-align: left;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Asegura que los elementos estén en línea */
+        flex-wrap: nowrap; /* Evita el retorno de línea */
     }
 
     #menu ul li {
-        margin: 0 10px; /* Ajusta el margen entre elementos */
-        display: inline-block;
+        margin-right: 10px; /* Ajusta el margen entre elementos */
+        flex-shrink: 0; /* Evita que los elementos se reduzcan */
     }
 
     /* Estilos específicos para el footer en dispositivos móviles */
@@ -460,23 +460,23 @@ h2.SobreMi {
     }
 
     .footer-content {
-        display: inline-flex;
+        display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     .footer-links {
-        display: inline;
+        list-style: none;
         margin: 0;
         padding: 0;
+        display: flex; /* Asegura que los elementos estén en línea */
+        flex-wrap: nowrap; /* Evita el retorno de línea */
     }
 
     .footer-links li {
-        display: inline;
-        margin-right: 10px;
-    }
-
-    .footer-links li:last-child {
-        margin-right: 0;
-    }
+        margin-right: 10px; /* Ajusta el margen entre elementos */
+        flex-shrink: 0; /* Evita que los elementos se reduzcan */
+    }   
 }
+
+
