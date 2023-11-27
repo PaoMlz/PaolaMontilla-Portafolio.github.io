@@ -430,73 +430,53 @@ h2.SobreMi {
     margin: 30px;
     color: green; /* Cambiar el color a verde */
 }
-
 @media only screen and (max-width: 767px) {
     /* Ajustes generales para dispositivos móviles */
-    body {
-        font-size: 16px;
-    }
 
     /* Estilos para el menú de navegación en dispositivos móviles */
     #menu {
         padding: 10px;
+        overflow-x: auto; /* Agrega scroll horizontal si el contenido excede el ancho */
+        white-space: nowrap; /* Evita el retorno de línea */
     }
 
     #menu ul {
-        flex-direction: column;
+        flex-direction: row; /* Alinea los elementos en una fila */
         align-items: center;
-        text-align: center;
+        text-align: left;
     }
 
     #menu ul li {
-        margin: 10px 0;
+        margin: 0 10px; /* Ajusta el margen entre elementos */
+        display: inline-block;
     }
 
-    /* Estilos para el encabezado en dispositivos móviles */
-    header {
-        padding: 10px;
-    }
-
-    header .hero .hero-image {
-        width: 150px;
-        height: 150px;
-    }
-
-    .hero-name {
-        font-size: 24px;
-    }
-
-    .hero-title {
-        font-size: 16px;
-    }
-
-    .hero-message {
-        font-size: 14px;
-    }
-
-    /* Estilos para la sección "Sobre Mí" en dispositivos móviles */
-    #aboutMeContent {
-        padding: 10px;
-    }
-
-    .about-photo img {
-        width: 100%;
-        height: auto;
-        margin-right: 0;
-    }
-/* Estilos específicos para el footer */
+    /* Estilos específicos para el footer en dispositivos móviles */
     footer {
         width: 100%;
         padding: 10px; /* Ajusta el padding según sea necesario */
+        overflow-x: auto; /* Agrega scroll horizontal si el contenido excede el ancho */
+        white-space: nowrap; /* Evita el retorno de línea */
     }
 
     .footer-content {
-        flex-direction: column;
+        display: inline-flex;
+        justify-content: space-between;
         align-items: center;
     }
 
-   
+    .footer-links {
+        display: inline;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-links li {
+        display: inline;
+        margin-right: 10px;
+    }
+
+    .footer-links li:last-child {
+        margin-right: 0;
+    }
 }
-
-
-
