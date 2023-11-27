@@ -477,6 +477,17 @@ h2.SobreMi {
         margin-right: 10px; /* Ajusta el margen entre elementos */
         flex-shrink: 0; /* Evita que los elementos se reduzcan */
     }   
+
+     /* Reducir el tamaño de la imagen */
+    .about-photo img {
+        width: 120px; /* Ancho más pequeño para la imagen */
+        height: 160px; /* Altura más pequeña para la imagen */
+        margin-right: 10px; /* Ajusta el margen derecho para separar la foto de la descripción */
+    }
+
+    .about-description {
+        padding: 10px; /* Reducir el padding de la descripción */
+    }
 }
 
 
