@@ -484,7 +484,34 @@ h2.SobreMi {
         height: auto;
         margin-right: 0;
     }
+/* Estilos específicos para el footer */
+    footer {
+        width: 100%;
+        padding: 10px; /* Ajusta el padding según sea necesario */
+    }
 
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Estilos específicos para el menú de navegación */
+    #menu {
+        padding: 10px;
+        width: 100%;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #menu ul li {
+        margin: 10px 0;
+    }
+}
 
 
 
