@@ -480,8 +480,8 @@ h2.SobreMi {
 
      /* Reducir el tamaño de la imagen */
     .about-photo img {
-        width: 120px; /* Ancho más pequeño para la imagen */
-        height: 160px; /* Altura más pequeña para la imagen */
+        width: 80px; /* Ancho más pequeño para la imagen */
+        height: 90px; /* Altura más pequeña para la imagen */
         margin-right: 10px; /* Ajusta el margen derecho para separar la foto de la descripción */
     }
 
